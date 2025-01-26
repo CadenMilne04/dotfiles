@@ -31,3 +31,9 @@ opt.background = "dark" -- colorschemes that can be light or dark will be made d
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- systemclipboard
+vim.opt.clipboard = 'unnamedplus'
+
+-- line
+opt.colorcolumn = "99"
