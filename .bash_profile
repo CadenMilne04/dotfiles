@@ -27,7 +27,8 @@ alias epp="cd ~/epp-projects/"
 alias cyclone="cd ~/epp-projects/cyclone/"
 alias jrpm="cd ~/epp-projects/jira-rpm/"
 alias auc="cd ~/epp-projects/atlassian-user-cleanup/"
-alias adc="cd ~/epp-projects/atlassian-docker-composes"
+alias da="cd ~/epp-projects/dockerized-atlassian/"
+alias sqlt="cd /Users/cmilne/epp-projects/sqlite-test"
 
 # SSH hosts ========
 alias lxrm="ssh cmilne_mgr@lx-rivermint.ad.sei.cmu.edu"
@@ -41,6 +42,8 @@ alias lprd="ssh cmilne_mgr@leopard.ecru.cert.org"
 alias crbn="ssh cmilne_mgr@caribbean.ecru.cert.org"
 alias bgry="ssh cmilne_mgr@bluegrey.ecru.cert.org"
 alias bskg="ssh cmilne_mgr@basking.ecru.cert.org"
+alias brnr="ssh cmilne_mgr@berner.ecru.cert.org"
+alias glpg="ssh cmilne_mgr@galapagos.ecru.cert.org"
 
 # rust ===========
 alias ct="cargo test"

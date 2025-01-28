@@ -31,3 +31,10 @@ opt.background = "dark" -- colorschemes that can be light or dark will be made d
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- same paste across mac
+vim.api.nvim_set_option("clipboard","unnamed")
+
+vim.opt.colorcolumn = "99"
+
+
