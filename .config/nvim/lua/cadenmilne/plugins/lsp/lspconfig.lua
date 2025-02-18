@@ -124,9 +124,9 @@ return {
           capabilities = capabilities,
         })
       end,
-      ["rust-analyzer"] = function()
+      ["rust_analyzer"] = function()
         -- configure go server
-        lspconfig["rust-analyzer"].setup({
+        lspconfig["rust_analyzer"].setup({
           capabilities = capabilities,
         })
       end,

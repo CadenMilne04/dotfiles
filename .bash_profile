@@ -7,7 +7,6 @@ alias t='tmux'
 alias e='exit'
 alias n='nvim'
 alias c="clear"
-alias p="python3"
 
 # git related ===
 alias gs="git status"
@@ -48,6 +47,10 @@ alias glpg="ssh cmilne_mgr@galapagos.ecru.cert.org"
 # rust ===========
 alias ct="cargo test"
 
+# python ===========
+alias p="python3"
+alias pydoc="python3 -m pydoc"
+
 # git ps1 ========
 source ~/.git-prompt.sh
 source ~/.git-completion.bash
@@ -57,7 +60,7 @@ PS1='\[\033[01;92m\]→ \[\033[01;96m\]\W \[\033[01;34m\]$(__git_ps1 "git:(\[\03
 # PS1='\W \$ '
 
 # Color ls output
-alias ls='ls --color=auto'
+alias ls='ls -a --color=auto'
 alias ll='ls -lah --color=auto'
 
 export LIBRARY_PATH="$LIBRARY_PATH:/opt/homebrew/lib"

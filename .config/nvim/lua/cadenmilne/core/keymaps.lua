@@ -1,7 +1,7 @@
 -- set the leader to space
 vim.g.mapleader = " "
 
-local keymap = vim.keymap -- for conciseness
+local keymap = vim.keymap     -- for conciseness
 
 -- save with cntrl + s
 keymap.set("n", "<C-s>", ":w<CR>")
@@ -17,6 +17,6 @@ keymap.set("n", "<leader>bc", ":bd<CR>")
 -- quit
 keymap.set("n", "<leader>q", ":qa!<CR>")
 
-vim.keymap.set("n", "<leader>bf", vim.lsp.buf.format, { remap = false })
+vim.keymap.set("n", "<leader>fb", vim.lsp.buf.format, { remap = false })
 
 vim.keymap.set("n", "<leader>ts", ":Telescope colorscheme<CR>")
