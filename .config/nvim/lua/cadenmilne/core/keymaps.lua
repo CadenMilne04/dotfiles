@@ -10,9 +10,9 @@ keymap.set("n", "<C-s>", ":w<CR>")
 keymap.set("n", "<C-n>", ":NvimTreeToggle<CR>")
 
 --buffers
-keymap.set("n", "<tab>", ":bnext<CR>")
-keymap.set("n", "<S-tab>", ":bprev<CR>")
-keymap.set("n", "<leader>bc", ":bd<CR>")
+-- ***commenting out to try using ctrl+i and ctrl+o instead
+-- keymap.set("n", "<tab>", ":bnext<CR>")
+-- keymap.set("n", "<S-tab>", ":bprev<CR>")
 
 -- quit
 keymap.set("n", "<leader>q", ":qa!<CR>")

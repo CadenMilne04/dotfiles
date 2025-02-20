@@ -18,6 +18,7 @@ alias gl="git log --graph"
 
 # projects =======
 alias bpro="n ~/.bash_profile"
+alias dots="n ~/dotfiles/.config/"
 alias csr="cd ~/epp-projects/epp_csr_generation/"
 alias csrc="cd ~/epp-projects/csr_generation_client/"
 alias hm="cd ~/epp-projects/harbor-automation/"
