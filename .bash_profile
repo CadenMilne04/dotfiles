@@ -46,8 +46,6 @@ alias bskg="ssh cmilne_mgr@basking.ecru.cert.org"
 alias ct="cargo test"
 
 # git ps1 ========
-source ~/.git-prompt.sh
-source ~/.git-completion.bash
 PS1='\[\033[01;92m\]→ \[\033[01;96m\]\W \[\033[01;34m\]$(__git_ps1 "git:(\[\033[01;92m\]%s\[\033[01;34m\]) ")\[\033[00m\]\$ '
 
 #Simple Prompt
@@ -70,4 +68,3 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:${PATH}"
 export PATH
 
 export NODE_EXTRA_CA_CERTS=/Users/cmilne/certificates/ZscalerRootCertificate-2048-SHA256.crt
-. "$HOME/.cargo/env"

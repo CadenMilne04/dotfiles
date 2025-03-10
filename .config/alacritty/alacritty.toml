@@ -1,5 +1,5 @@
-[shell]
-program = "/usr/local/bin/tmux"
+[terminal.shell]
+program = "/usr/bin/tmux"
 args = ["new-session",  "-A", "-s",  "main"]
 
 [env]
