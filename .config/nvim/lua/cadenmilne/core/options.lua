@@ -6,6 +6,9 @@ local opt = vim.opt -- for conciseness
 --undofile
 vim.cmd 'set undofile'
 
+-- no more no name buffers
+vim.cmd 'set nohidden'
+
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
 opt.number = true         -- shows absolute line number on cursor line (when relative number is on)
