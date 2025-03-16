@@ -68,3 +68,6 @@ PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:${PATH}"
 export PATH
 
 export NODE_EXTRA_CA_CERTS=/Users/cmilne/certificates/ZscalerRootCertificate-2048-SHA256.crt
+
+export PATH=$PATH:/snap/bin
+
