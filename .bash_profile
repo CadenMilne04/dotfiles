@@ -31,19 +31,26 @@ alias da="cd ~/epp-projects/dockerized-atlassian/"
 alias sqlt="cd /Users/cmilne/epp-projects/sqlite-test"
 
 # SSH hosts ========
-alias lxrm="ssh cmilne_mgr@lx-rivermint.ad.sei.cmu.edu"
-alias wbgg="ssh cmilne_mgr@wobbegong.ecru.cert.org"
-alias bltp="ssh cmilne_mgr@blacktip.ecru.cert.org"
-alias gbln="ssh cmilne_mgr@goblin.ecru.cert.org"
-alias slpr="ssh cmilne_mgr@sleeper.ecru.cert.org"
-alias bull="ssh cmilne_mgr@bull.ecru.cert.org"
-alias zbra="ssh cmilne_mgr@zebra.ecru.cert.org"
-alias lprd="ssh cmilne_mgr@leopard.ecru.cert.org"
-alias crbn="ssh cmilne_mgr@caribbean.ecru.cert.org"
-alias bgry="ssh cmilne_mgr@bluegrey.ecru.cert.org"
-alias bskg="ssh cmilne_mgr@basking.ecru.cert.org"
-alias brnr="ssh cmilne_mgr@berner.ecru.cert.org"
-alias glpg="ssh cmilne_mgr@galapagos.ecru.cert.org"
+export MGR_ACCOUNT="cmilne_mgr"
+alias lxrm="ssh $MGR_ACCOUNT@lx-rivermint.ad.sei.cmu.edu"
+alias wbgg="ssh $MGR_ACCOUNT@wobbegong.ecru.cert.org"
+alias bltp="ssh $MGR_ACCOUNT@blacktip.ecru.cert.org"
+alias gbln="ssh $MGR_ACCOUNT@goblin.ecru.cert.org"
+alias slpr="ssh $MGR_ACCOUNT@sleeper.ecru.cert.org"
+alias bull="ssh $MGR_ACCOUNT@bull.ecru.cert.org"
+alias zbra="ssh $MGR_ACCOUNT@zebra.ecru.cert.org"
+alias lprd="ssh $MGR_ACCOUNT@leopard.ecru.cert.org"
+alias crbn="ssh $MGR_ACCOUNT@caribbean.ecru.cert.org"
+alias bgry="ssh $MGR_ACCOUNT@bluegrey.ecru.cert.org"
+alias bskg="ssh $MGR_ACCOUNT@basking.ecru.cert.org"
+alias glpg="ssh $MGR_ACCOUNT@galapagos.ecru.cert.org"
+alias grld="ssh $MGR_ACCOUNT@greenland.ecru.cert.org"
+alias brbl="ssh $MGR_ACCOUNT@bramble.ecru.cert.org"
+alias slmn="ssh $MGR_ACCOUNT@salmon.ecru.cert.org"
+
+alias brnr="ssh $MGR_ACCOUNT@berner.ecru.cert.org"
+alias ccdl="ssh $MGR_ACCOUNT@crocodile.ecru.cert.org"
+alias bhma="ssh $MGR_ACCOUNT@bahama.ecru.cert.org"
 
 # rust ===========
 alias ct="cargo test"
@@ -78,3 +85,6 @@ export PATH
 
 export NODE_EXTRA_CA_CERTS=/Users/cmilne/certificates/ZscalerRootCertificate-2048-SHA256.crt
 . "$HOME/.cargo/env"
+
+# thefuck
+eval $(thefuck --alias)
