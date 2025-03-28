@@ -3,11 +3,14 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # alias section =============================
 alias ..='cd ../'
-alias t='tmux'
+alias tm='tmux new-session -A -s main'
+alias ts='tmux new-session -A -s school'
+alias tp='tmux new-session -A -s project'
 alias e='exit'
 alias n='nvim'
 alias c="clear"
-alias p="python3"
+alias ls='ls -a --color=auto'
+alias ll='ls -lah --color=auto'
 
 # git related ===
 alias gs="git status"
@@ -17,57 +20,61 @@ alias gc="git commit -m"
 alias gp="git push"
 alias gl="git log --graph"
 
-# projects =======
-alias bpro="n ~/.bash_profile"
-alias csr="cd ~/epp-projects/epp_csr_generation/"
-alias csrc="cd ~/epp-projects/csr_generation_client/"
-alias hm="cd ~/epp-projects/harbor-automation/"
-alias flex="cd ~/epp-projects/flexnet-monitor/"
-alias epp="cd ~/epp-projects/"
-alias cyclone="cd ~/epp-projects/cyclone/"
-alias jrpm="cd ~/epp-projects/jira-rpm/"
-alias auc="cd ~/epp-projects/atlassian-user-cleanup/"
-alias adc="cd ~/epp-projects/atlassian-docker-composes"
+# servers ========
+alias server="ssh root@cadenmilne.com" # Have an ssh-key setup for my macbook.
+alias testhost="ssh root@134.209.77.136" # Have an ssh-key setup for my macbook.
 
-# SSH hosts ========
-alias lxrm="ssh cmilne_mgr@lx-rivermint.ad.sei.cmu.edu"
-alias wbgg="ssh cmilne_mgr@wobbegong.ecru.cert.org"
-alias bltp="ssh cmilne_mgr@blacktip.ecru.cert.org"
-alias gbln="ssh cmilne_mgr@goblin.ecru.cert.org"
-alias slpr="ssh cmilne_mgr@sleeper.ecru.cert.org"
-alias bull="ssh cmilne_mgr@bull.ecru.cert.org"
-alias zbra="ssh cmilne_mgr@zebra.ecru.cert.org"
-alias lprd="ssh cmilne_mgr@leopard.ecru.cert.org"
-alias crbn="ssh cmilne_mgr@caribbean.ecru.cert.org"
-alias bgry="ssh cmilne_mgr@bluegrey.ecru.cert.org"
-alias bskg="ssh cmilne_mgr@basking.ecru.cert.org"
+# projects =======
+alias bpro="nvim ~/.bash_profile"
+alias dots="nvim ~/dotfiles/.config/"
+alias thoth="ssh cjm295@thoth.cs.pitt.edu"
+alias market="cd ~/web-projects/college-marketplace/"
+alias rw="cd ~/rust-projects/web-server/"
+alias hack="cd ~/programming/graph-predictor"
+alias tcp="cd /Users/cadenmilne/pitt/cs1652/project-2/cs1652-project-2"
+alias notes="cd /Users/cadenmilne/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/notes"
+
+# pitt
+alias pitt="cd ~/pitt"
+alias 1520="cd ~/pitt/cs1520/"
+alias 1652="cd ~/pitt/cs1652/"
+alias aoc="cd ~/programming/advent-of-code/"
+alias web="cd ~/programming/web-projects/"
+alias qbc="cd /Users/cadenmilne/programming/web-projects/quote-book/client/"
+alias qbs="cd /Users/cadenmilne/programming/web-projects/quote-book/server/"
+
+
+# classes =======
+alias 1622="cd ~/Documents/pitt-classes/f-2024/cs1622/"
 
 # rust ===========
 alias ct="cargo test"
 
 # git ps1 ========
 source ~/.git-prompt.sh
-source ~/.git-completion.bash
 PS1='\[\033[01;92m\]→ \[\033[01;96m\]\W \[\033[01;34m\]$(__git_ps1 "git:(\[\033[01;92m\]%s\[\033[01;34m\]) ")\[\033[00m\]\$ '
 
 #Simple Prompt
 # PS1='\W \$ '
 
-# Color ls output
-alias ls='ls --color=auto'
-alias ll='ls -lah --color=auto'
-
 export LIBRARY_PATH="$LIBRARY_PATH:/opt/homebrew/lib"
-export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
-# Setting PATH for Python 3.12
-# The original version is saved in .bash_profile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:${PATH}"
-export PATH
-
-export NODE_EXTRA_CA_CERTS=/Users/cmilne/certificates/ZscalerRootCertificate-2048-SHA256.crt
+export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin
 . "$HOME/.cargo/env"
+
+# Created by `pipx` on 2024-06-11 00:08:10
+export PATH="$PATH:/Users/cadenmilne/.local/bin"
+
+# CPP Path Stuff
+export CPLUS_INCLUDE_PATH=/opt/homebrew/include/SDL2:$CPLUS_INCLUDE_PATH
+export LIBRARY_PATH=/opt/homebrew/lib:$LIBRARY_PATH
+
+# Python, important for pylint
+export PYTHONPATH="/Users/cadenmilne/pitt/cs1520/project2-CadenMilne04/venv/lib/python3.13/site-packages"
+
+# bash completion
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+# git completion
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
