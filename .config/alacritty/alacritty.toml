@@ -14,6 +14,12 @@ blur = true
 title = "Terminal"
 decorations = "Buttonless"
 
+[keyboard]
+bindings = [
+  { key = "Right", mods = "Alt", chars = "\u001BF" },
+  { key = "Left",  mods = "Alt", chars = "\u001BB" },
+]
+
 # Cattpuccin Theme
 [colors.primary]
 background = "#303446"
