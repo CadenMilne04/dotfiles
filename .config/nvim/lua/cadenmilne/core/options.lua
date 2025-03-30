@@ -1,8 +1,5 @@
 local opt = vim.opt -- for conciseness
 
--- startup colorscheme
--- vim.cmd.colorscheme "catppuccin-mocha"
-
 --undofile
 vim.cmd 'set undofile'
 
@@ -27,8 +24,6 @@ opt.cursorline = true -- highlight the current cursor line
 
 -- appearance
 
--- turn on termguicolors for nightfly colorscheme to work
--- (have to use iterm2 or any other true color terminal)
 opt.termguicolors = true
 opt.background = "dark" -- colorschemes that can be light or dark will be made dark
 

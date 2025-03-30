@@ -8,7 +8,7 @@ return {
         -- import mason
         local mason = require("mason")
 
-        local null_ls = require 'null-ls'
+        local null_ls = require("null-ls")
         null_ls.setup()
 
         -- Use this to setup formatters that you don't already have setup

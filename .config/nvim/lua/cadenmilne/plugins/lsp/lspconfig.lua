@@ -29,9 +29,6 @@ return {
                 opts.desc = "Show LSP references"
                 keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
-                opts.desc = "Go to declaration"
-                keymap.set("n", "gD", vim.lsp.buf.declaration, opts) -- go to declaration
-
                 opts.desc = "Show LSP definitions"
                 keymap.set("n", "gd", "<cmd>Telescope lsp_definitions<CR>", opts) -- show lsp definitions
 
@@ -69,13 +66,6 @@ return {
                     capabilities = capabilities,
                 })
             end,
-            ["graphql"] = function()
-                -- configure graphql language server
-                lspconfig["graphql"].setup({
-                    capabilities = capabilities,
-                    filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-                })
-            end,
             ["emmet_ls"] = function()
                 -- configure emmet language server
                 lspconfig["emmet_ls"].setup({
@@ -85,10 +75,6 @@ return {
                         "typescriptreact",
                         "javascriptreact",
                         "css",
-                        "sass",
-                        "scss",
-                        "less",
-                        "svelte",
                     },
                 })
             end,
@@ -107,36 +93,6 @@ return {
                             },
                         },
                     },
-                })
-            end,
-            ["tailwindcss"] = function()
-                -- configure twcss language server
-                lspconfig["tailwindcss"].setup({
-                    capabilities = capabilities,
-                })
-            end,
-            ["pyright"] = function()
-                -- configure python server
-                lspconfig["pyright"].setup({
-                    capabilities = capabilities,
-                })
-            end,
-            ["clangd"] = function()
-                -- configure clangd server
-                lspconfig["clangd"].setup({
-                    capabilities = capabilities,
-                })
-            end,
-            ["gopls"] = function()
-                -- configure go server
-                lspconfig["gopls"].setup({
-                    capabilities = capabilities,
-                })
-            end,
-            ["rust_analyzer"] = function()
-                -- configure go server
-                lspconfig["rust_analyzer"].setup({
-                    capabilities = capabilities,
                 })
             end,
         })
