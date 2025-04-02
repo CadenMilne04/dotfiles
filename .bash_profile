@@ -33,6 +33,7 @@ alias rw="cd ~/rust-projects/web-server/"
 alias hack="cd ~/programming/graph-predictor"
 alias tcp="cd /Users/cadenmilne/pitt/cs1652/project-2/cs1652-project-2"
 alias notes="cd /Users/cadenmilne/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/notes"
+alias ovo="cd /Users/cadenmilne/programming/web-projects/oneveno/"
 
 # pitt
 alias pitt="cd ~/pitt"
