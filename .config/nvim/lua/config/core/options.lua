@@ -1,0 +1,34 @@
+-- persistent undo history
+vim.cmd 'set undofile'
+
+-- no more no name buffers
+vim.cmd 'set nohidden'
+
+-- line numbers
+vim.opt.relativenumber = true -- show relative line numbers
+vim.opt.number = true         -- shows absolute line number on cursor line (when relative number is on)
+
+-- tabs & indentation
+vim.opt.tabstop = 4       -- 4 spaces for tabs
+vim.opt.shiftwidth = 4    -- 4 spaces for indent width
+vim.opt.expandtab = true  -- expand tab to spaces
+vim.opt.autoindent = true -- copy indent from current line when starting new one
+
+-- line wrapping
+vim.opt.wrap = false -- disable line wrapping
+
+-- cursor line
+vim.opt.cursorline = true -- highlight the current cursor line
+
+-- turn off swapfile
+vim.opt.swapfile = false
+
+-- systemclipboard
+vim.opt.clipboard = 'unnamedplus'
+
+-- line
+vim.opt.colorcolumn = "99"
+
+vim.opt.termguicolors = true
+
+vim.cmd 'set completeopt=fuzzy,menuone,popup,noselect'
