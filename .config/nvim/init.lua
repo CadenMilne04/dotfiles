@@ -35,5 +35,7 @@ vim.lsp.enable({
     "rust-analyzer",
     -- tailwind css
     "tailwindcss",
+    -- c/c++
+    "clangd",
 })
 

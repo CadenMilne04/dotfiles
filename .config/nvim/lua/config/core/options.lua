@@ -32,3 +32,7 @@ vim.opt.colorcolumn = "99"
 vim.opt.termguicolors = true
 
 vim.cmd 'set completeopt=fuzzy,menuone,popup,noselect'
+
+
+vim.opt.termguicolors = true
+
