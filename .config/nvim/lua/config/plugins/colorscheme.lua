@@ -1,9 +1,13 @@
 return {
-	{ "catppuccin/nvim", 
-		config = function()
-			vim.cmd("colorscheme catppuccin-frappe")
-		end
-	},
-	{ "Mofiqul/vscode.nvim"},
-}
+    {
+        "catppuccin/nvim",
+    },
+    { "Mofiqul/vscode.nvim" },
+    {
+        "ellisonleao/gruvbox.nvim",
+        config = function()
+            vim.cmd("colorscheme gruvbox")
+        end
+    }
 
+}

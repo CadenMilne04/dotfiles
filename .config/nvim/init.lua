@@ -23,7 +23,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 })
 
 -- inline diagnostics
-vim.diagnostic.config({ virtual_text = true })
+vim.diagnostic.config({ virtual_text = false, virtual_lines = { current_line = true } })
 
 -- enable lsps
 vim.lsp.enable({
@@ -37,5 +37,25 @@ vim.lsp.enable({
     "tailwindcss",
     -- c/c++
     "clangd",
+    -- R programming language
+    "r_language_server",
+    -- dart programming language
+    "dartls",
 })
 
+-- Set wrap and linebreak for .md files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  command = "setlocal wrap linebreak"
+})
+
+-- Unset wrap and linebreak for all other files
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "*",
+  callback = function()
+    if vim.bo.filetype ~= "markdown" then
+      vim.opt_local.wrap = false
+      vim.opt_local.linebreak = false
+    end
+  end
+})
