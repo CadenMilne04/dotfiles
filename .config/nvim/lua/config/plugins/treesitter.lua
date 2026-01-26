@@ -1,16 +1,30 @@
-return{
+return {
     'nvim-treesitter/nvim-treesitter',
     config = function()
-        require'nvim-treesitter.configs'.setup {
-            ensure_installed = { "c", "go", "lua", "vim", "vimdoc", "query", "java", "markdown", "markdown_inline"},
-            sync_install = false,
-            auto_install = true,
-            ignore_install = {},
+        require 'nvim-treesitter.configs'.setup {
+            ensure_installed = {
+                "r",
+                "rnoweb",
+                "markdown",
+                "markdown_inline",
+                "c",
+                "go",
+                "lua",
+                "vim",
+                "vimdoc",
+                "query",
+                "java"
+            },
             highlight = {
                 enable = true,
-                disable = { },
-                additional_vim_regex_highlighting = false,
+                additional_vim_regex_highlighting = { "markdown" },
             },
+            indent = {
+                enable = true
+            },
+            injections = {
+                enable = true
+            }
         }
     end
 }

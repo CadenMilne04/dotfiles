@@ -36,3 +36,7 @@ vim.cmd 'set completeopt=fuzzy,menuone,popup,noselect'
 
 vim.opt.termguicolors = true
 
+-- netrw file explorer settings
+vim.g.netrw_liststyle = 3        -- Start in tree view
+vim.g.netrw_banner = 0           -- Hide the top info banner
+vim.g.netrw_winsize = 25         -- Window size when split

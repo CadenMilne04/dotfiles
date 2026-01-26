@@ -38,24 +38,40 @@ vim.lsp.enable({
     -- c/c++
     "clangd",
     -- R programming language
-    "r_language_server",
+    "r-language-server",
     -- dart programming language
     "dartls",
+    -- html, css, js w/ vscode ls
+    "html",
+    -- swift
+    "sourcekit",
+    -- go
+    "gopls",
+    -- python
+    "pyright",
+    -- elixir,
+    "elixirls",
+    -- laTeX,
+    "texlab",
+    -- haskell
+    "hls"
 })
 
 -- Set wrap and linebreak for .md files
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "markdown",
-  command = "setlocal wrap linebreak"
+    pattern = { "markdown", "rmd", "tex" },
+    command = "setlocal wrap linebreak"
 })
 
 -- Unset wrap and linebreak for all other files
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = "*",
-  callback = function()
-    if vim.bo.filetype ~= "markdown" then
-      vim.opt_local.wrap = false
-      vim.opt_local.linebreak = false
+    pattern = "*",
+    callback = function()
+        if vim.bo.filetype ~= "markdown"
+            and vim.bo.filetype ~= "tex"
+            and vim.bo.filetype ~= "rmd" then
+            vim.opt_local.wrap = false
+            vim.opt_local.linebreak = false
+        end
     end
-  end
 })

@@ -57,6 +57,7 @@ alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-t = 'workspace T'
 alt-a = 'workspace A'
+alt-r = 'workspace R'
 
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -69,6 +70,7 @@ alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
 alt-shift-t = 'move-node-to-workspace T'
 alt-shift-a = 'move-node-to-workspace A'
+alt-shift-r = 'move-node-to-workspace R'
 
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 

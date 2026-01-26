@@ -22,7 +22,7 @@ alias gl="git log --graph"
 
 # servers ========
 alias server="ssh root@cadenmilne.com" # Have an ssh-key setup for my macbook.
-alias testhost="ssh root@134.209.77.136" # Have an ssh-key setup for my macbook.
+alias server2="ssh root@134.209.40.66" # Have an ssh-key setup for my macbook.
 
 # projects =======
 alias bpro="nvim ~/.bash_profile"
@@ -45,6 +45,7 @@ alias aoc="cd ~/programming/advent-of-code/"
 alias web="cd ~/programming/web-projects/"
 alias qbc="cd /Users/cadenmilne/programming/web-projects/quote-book/client/"
 alias qbs="cd /Users/cadenmilne/programming/web-projects/quote-book/server/"
+alias mpx="cd /Users/cadenmilne/pitt/cs1635/machine-problems/mpx"
 
 
 # classes =======
@@ -61,8 +62,12 @@ PS1='\[\033[01;92m\]→ \[\033[01;96m\]\W \[\033[01;34m\]$(__git_ps1 "git:(\[\03
 # PS1='\W \$ '
 
 export LIBRARY_PATH="$LIBRARY_PATH:/opt/homebrew/lib"
-export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin
+export PATH=/Library/TeX/texbin:/Users/cadenmilne/.ghcup/ghc/9.6.7/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/usr/local/go/bin
+
+export PATH=$PATH:$HOME/go/bin
 . "$HOME/.cargo/env"
+
+export PATH=$PATH:$HOME/.ghcup/bin
 
 # Created by `pipx` on 2024-06-11 00:08:10
 export PATH="$PATH:/Users/cadenmilne/.local/bin"
@@ -81,3 +86,4 @@ export PYTHONPATH="/Users/cadenmilne/pitt/cs1520/project2-CadenMilne04/venv/lib/
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
+
