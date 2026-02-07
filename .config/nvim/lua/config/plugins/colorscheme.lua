@@ -1,8 +1,6 @@
 return {
-    {
-        "catppuccin/nvim",
-    },
     { "Mofiqul/vscode.nvim" },
+    { "catppuccin/nvim" },
     {
         "ellisonleao/gruvbox.nvim",
         config = function()
