@@ -40,3 +40,12 @@ vim.opt.termguicolors = true
 vim.g.netrw_liststyle = 3        -- Start in tree view
 vim.g.netrw_banner = 0           -- Hide the top info banner
 vim.g.netrw_winsize = 25         -- Window size when split
+
+-- textfiles
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "text",
+  callback = function()
+    vim.opt_local.textwidth = 80
+    vim.opt_local.formatoptions:append("t")
+  end,
+})
